@@ -1,17 +1,21 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, VStack, Heading, Text, Button, Image } from "@chakra-ui/react";
+import { FaMusic, FaTicketAlt } from "react-icons/fa";
 
 const Index = () => {
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+    <Container centerContent maxW="container.xl" p={5} height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <VStack spacing={8}>
+        <Image src="https://via.placeholder.com/150" alt="Band Logo" boxSize="150px" />
+        <Heading as="h1" size="2xl" fontWeight="bold">The Rock Legends</Heading>
+        <Text fontSize="xl" textAlign="center">
+          Join us on our world tour and experience the thrill of live music!
+        </Text>
+        <Button leftIcon={<FaTicketAlt />} colorScheme="teal" variant="solid" size="lg">
+          Buy Tickets
+        </Button>
+        <Button leftIcon={<FaMusic />} colorScheme="gray" variant="outline" size="lg">
+          Listen Now
+        </Button>
       </VStack>
     </Container>
   );
